@@ -1,0 +1,37 @@
+/* body {
+   margin: 0; 
+} */
+
+.main-header {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: normal;
+    
+}
+
+.main-header  div {
+    height: 30px;
+}
+
+.main-header .one{
+width: 400px;
+background-color: rgb(228, 179, 211);
+order: 3;
+}
+
+.main-header .two{
+ width: 400px;
+background-color: rgb(233, 92, 183);
+order: 1;
+    }
+
+.main-header .three{
+width: 400px;
+background-color: rgb(126, 85, 112);
+order: 0;
+        }

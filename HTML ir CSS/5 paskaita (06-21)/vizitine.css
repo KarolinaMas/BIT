@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 36%;
+    margin: 0 auto;
+    align-content: center;
+    
+}
+
+.pirma {
+    width: 465px;
+    height: 265px;
+    background: radial-gradient(circle, rgba(34, 195, 74, 1) 22%, rgba(71, 113, 107, 1) 62%);
+    margin-top: 100px;
+
+}
+.pirma img {
+    width: 90px;
+    height: auto;
+    margin-left: 184px;
+    margin-top: 87px;
+}
+
+.antra {
+    width: 465px;
+    height: 265px;
+    background: radial-gradient(circle, rgba(34, 195, 71, 1) 29%, rgba(71, 113, 96, 1) 100%);
+    margin-top: 100px;
+    margin-bottom: 200px;
+}

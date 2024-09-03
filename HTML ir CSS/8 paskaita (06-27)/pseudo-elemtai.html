@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elementai</title>
+    <style>
+      /* pridedam pries elementa ::before*/
+      .box::before {
+        content: "pries tai";
+      }
+
+      /* pridedam po elemento ::after */
+      .box::after {
+        content: "po to";
+      }
+
+      /* pridedam teksta tik prie tam tikros pastraipos */
+      .box2 p:nth-child(2)::after {
+        content: "lllllllllllllllllll";
+      }
+
+      .box2 p::first-line {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+        recusandae, ipsam nemo repellat corrupti non velit ad libero illum
+        tenetur odio ex deserunt ducimus, nobis culpa, accusamus quas
+        reprehenderit officiis.
+      </h1>
+    </div>
+    <div class="box2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eius
+        beatae quo, nostrum soluta quia itaque maiores, voluptatem, deleniti
+        vitae iure quidem natus qui. Accusantium, ullam. Eos commodi possimus
+        aut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eius
+        beatae quo, nostrum soluta quia itaque maiores, voluptatem, deleniti
+        vitae iure quidem natus qui. Accusantium, ullam. Eos commodi possimus
+        aut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eius
+        beatae quo, nostrum soluta quia itaque maiores, voluptatem, deleniti
+        vitae iure quidem natus qui. Accusantium, ullam. Eos commodi possimus
+        aut.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eius
+        beatae quo, nostrum soluta quia itaque maiores, voluptatem, deleniti
+        vitae iure quidem natus qui. Accusantium, ullam. Eos commodi possimus
+        aut.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    
+}
+
+.blue {
+    background-color: blue;
+    
+}
+
+.absolute {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+.relative {
+    background-color: aquamarine;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+}

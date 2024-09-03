@@ -1,0 +1,210 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.main {
+    width: 435px;
+    height: 595px;
+    background-color: #faf8ef;
+    position: absolute;
+    top: 20px;
+    left: 33%;
+
+}
+
+
+
+/* virsutine dalis: */
+
+.top {
+    display: flex;
+    height: 150px;
+}
+
+.left {
+    width: 50%;
+    position: relative;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+}
+
+
+/* kaire puse */
+
+.big-number {
+    color: #776e65;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 2px; 
+    position: absolute;
+    left: 25px;
+    top: 30px;
+}
+
+.join-game {
+    font-size: 14px;
+    margin-top: 3px;
+    position: absolute;
+    left: 25px;
+    bottom: 0; 
+}
+
+.join-game .one {
+    color: #776e65;
+    padding-bottom: 2px;
+
+}
+
+.old-two {
+    color: #776e65;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* desine puse  */
+
+.flex-container {
+    width: 174px;
+    display: flex;
+    color: #feffff;
+    gap: 4px;
+    position: absolute;
+    right: 25px;
+    top: 30px
+}
+
+.score {
+    width: 85px;
+    height: 42px;
+    background-color: #bbada0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.best {
+    width: 85px;
+    height: 42px;
+    background-color: #bbada0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.number {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.new-game {
+    color: #feffff;
+    width: 100px;
+    height: auto;
+    background-color: #8f7a66;
+    text-align: center;
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+}
+
+.new-game p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px;
+}
+
+
+/* apacia */
+
+.bottom {
+    width: 100%;
+    height: 445px;
+    position: relative;
+}
+
+.bottom div {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    font-weight: 700;
+    font-size: 37px;
+    margin-top: 13px;
+}
+
+.background {
+    background-color: #bbada0;
+    position: absolute;
+    width: 385px;
+    height: 385px;
+    right: 25px;
+    left: 25px;
+    top: 30px;
+    bottom: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 13px;
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    margin-top: 0;
+}
+
+.empty {
+    height: 80px;
+    width: 80px;
+    background-color: #cdc1b4;
+}
+
+.two {
+    height: 80px;
+    width: 80px;
+    background-color: #eee4da;
+}
+
+.four {
+    height: 80px;
+    width: 80px;
+    background-color: #eee1c9;  
+}
+
+.eight {
+    height: 80px;
+    width: 80px;
+    background-color: #f3b27a;
+}
+
+.thirty-two {
+    height: 80px;
+    width: 80px;
+    background-color: #f77c5f;
+}
+
+.hundred-twenty-eight {
+    height: 80px;
+    width: 80px;
+    background-color: #edd073;
+}
+
+.text-dark {
+    color: #766d64;
+}
+
+.text-light {
+    color: #f9f6f2;
+}

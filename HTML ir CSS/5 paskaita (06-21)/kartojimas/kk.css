@@ -1,0 +1,112 @@
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* headeris */
+
+header {
+    background-color: rgb(238, 138, 138);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.flex-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
+
+header .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px 10px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    color: white;
+    background-color: rgb(167, 40, 82);
+}
+
+.logo {
+    width: 110px;
+}
+
+/* sekcijos */
+
+section {
+    background-color: rgb(247, 193, 214);
+    padding: 30px 0;
+}
+
+section h1 {
+    margin-top: 0;
+    color: white;
+}
+
+.content {
+    display: flex;
+    padding-top: 20px;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.image {
+    width: 50%;
+}
+
+.text {
+    text-align: justify;
+}
+
+/* kas antros sekcijos turinio vietu sukeitimas */
+
+section.reverse-content {
+    background-color: rgb(212, 71, 71);   
+}
+
+section.reverse-content h1{
+    text-align: end;
+}
+
+section.reverse-content .content {
+    flex-direction: row-reverse;
+}
+
+#Home {
+    padding-top: 70px;
+}

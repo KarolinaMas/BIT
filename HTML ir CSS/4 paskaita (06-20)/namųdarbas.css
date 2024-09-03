@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+}
+
+body header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    background-color: black;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li a {
+    color: antiquewhite;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(236, 165, 165);
+    color: red;
+}
+
+img {
+    max-width: 100%;
+}
+
+header .logo {
+    width: 110px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: -3px;
+}
+body section {
+    margin: 0;
+}
+
+section {
+    background: white url(gradientas.jpg) no-repeat 0 0 / cover;
+}
+main section h1 {
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+}
+main section .container {
+    color: rgb(238, 202, 202);
+    justify-content: space-between;
+}
+main .flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 250px;
+    padding-bottom: 41px;
+    
+}
+main .img {
+    width: 1000px;
+    height: auto;
+}
+.section2 .flex-container {
+    flex-direction: row-reverse;
+}
+.section2 h1 {
+    text-align: center;
+}
+main .tekstas {
+    text-align: justify;
+}

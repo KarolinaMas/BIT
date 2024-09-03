@@ -1,0 +1,94 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+}
+
+body header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    background-color: rgb(238, 221, 221);
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li a {
+    color: rgb(189, 82, 21);
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+
+}
+
+header nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+header .logo {
+    width: 110px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    /* background-image: url(vartojau.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-color: azure;
+    height: auto;
+    /* background-position: 20px 300px; */
+    /* background: black url(vartojau.jpg) no-repeat 00 / cover; */
+}
+
+section h1 {
+    color: blue;
+    margin: 0;
+}
+
+section .content {
+    display: flex;
+    gap: 50px;
+}
+
+section .image {
+    /* width: 30%; */
+    flex: 0 0 30%;
+}
+
+section .text {
+    /* width: 70%; */
+    /* padding-top: 150px; */
+    align-self: center;
+}
+section.alternate {
+    background-color: rgb(27, 94, 94);
+
+}
+section.alternate .content {
+    flex-direction: row-reverse;
+}
+#Home {
+    background-color: blanchedalmond;
+}

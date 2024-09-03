@@ -1,0 +1,52 @@
+main {
+width: 100%;
+height: calc(100vh - 60px);
+background-color: rgb(6, 6, 53);
+margin-top: 60px;
+background-image: url(img/pexels-liza-summer-6347901.png), url(img/pexels-eberhard-grossgasteiger-844297.png);
+background-size: 70vh, cover;
+background-repeat: no-repeat;
+background-position: bottom left calc(50% + 80px), center;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 100;
+column-gap: 220px;
+}
+
+main .main-intro h1 {
+    font-size: 96px;
+    line-height: 106px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 30px;
+}
+main a {
+    font-size: 18px;
+    display: block;
+    background-color: var(--site-color-01);
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 30px;
+}
+
+main .main-qoutes p {
+    border-left: 4px solid var(--site-color-01);
+    padding-left: 20px;
+    margin: 40px 0;
+}
+main .main-qoutes p:nth-child(2) {
+margin-left: 100px;
+}
+
+main .main-intro {
+
+    padding-bottom: 8vh;
+}
+
+main .main-qoutes {
+
+    padding-bottom: 8vh  
+}

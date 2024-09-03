@@ -1,0 +1,15 @@
+/* parsisiusto srifto idejimas */
+
+@font-face {
+    font-family: 'naujas';
+    src: url(/fonts/Cerebri-Sans-Bold.ttf);
+}
+
+/* galima parsisiust skirtingu storiu, juos reik is naujo apsirasyt ir juos taikyti su font-weight */
+
+h1 {
+    font-family: 'naujas';
+}
+p {
+    font-family: 'naujas';
+}

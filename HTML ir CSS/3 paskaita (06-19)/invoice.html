@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>INVOICE</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 40px 100px 8px 110px
+        }
+
+        .lenteleVienas {
+            width: 60%;
+        }
+
+        .lenteleVienas thead tr td {
+            color: #7f7f7f;
+            font-weight: 400;
+            text-align: center;
+            font-size: 25px;
+            height: 150px;
+            width: 250px;
+        }
+
+        .lenteleVienas tbody tr td {
+            height: 20px;
+        }
+
+        .lenteleVienas tbody tr td:nth-child(1) {
+            color: #515c69;
+            text-align: left;
+            font-size: 14px;
+
+        }
+
+        .lenteleVienas tbody tr td:nth-child(2) {
+            font-size: 12px;
+            font-weight: bolder;
+            text-align: center;
+            color: #1f3864;
+        }
+
+        .lenteleDu {
+            width: 53%;
+        }
+
+        .lenteleDu tbody tr td {
+            text-align: left;
+            font-size: 14px;
+            color: #313942;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 20px;
+        }
+
+        .lenteleDu thead tr td {
+            font-size: 12px;
+            font-weight: bolder;
+            color: #1f3864;
+            border-bottom: 1px solid #bfbfbf;
+            height: 15px;
+        }
+        .lenteleTrys {
+            width: 53%;
+            border-collapse:collapse;
+            border-spacing: 0;
+            margin-top: 40px;
+        }
+        .lenteleTrys thead {
+            color: white;
+            background-color: #3c78d8;
+            font-weight: 400;
+            border-spacing: 0px;
+            font-size: 12px;
+            border-collapse:collapse;
+        }
+        .lenteleTrys thead tr th {
+            padding-top: 3px;
+            padding-bottom: 6px;
+        }
+        .lenteleTrys tbody {
+            border: 1px solid #bfbfbf;
+            font-size: 14px;
+            color: #313942;
+
+        }
+        .lenteleTrys tbody tr td {
+            border: 1px solid #bfbfbf;
+            padding-top: 4px;
+            padding-bottom: 6px;
+        }
+        .lenteleTrys tbody tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+        .paskutine {
+            width: 53%;
+            margin-right: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <table class="lenteleVienas">
+            <thead>
+
+                <tr>
+                    <td style="text-align: left;">INVOICE</td>
+                    <td><img src="logo.png" alt="logo" height="105px"></td>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Your Company Name</td>
+                    <td>2023-06-16
+                        <hr style="color: #bfbfbf; width: 50%;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>123 Street Address</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>City, State, Zip/Post Code</td>
+                    <td>20230616
+                        <hr style="color: #bfbfbf; width: 50%;" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-top: 35px;">
+        <table class="lenteleDu">
+            <thead style="border-spacing: 0px;">
+                <tr>
+                    <td style="margin-right: 10px;">BILL TO</td>
+                    <td>SHIP TO</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contact Name</td>
+                    <td>Name / Dept</td>
+                </tr>
+                <tr>
+                    <td>Client Company Name</td>
+                    <td>Client Company Name</td>
+                </tr>
+                <tr>
+                    <td>Adrress</td>
+                    <td>Adrress</td>
+                </tr>
+                <tr>
+                    <td>Phone, Email</td>
+                    <td>Phone</td>
+                </tr>
+
+            </tbody>
+    </div>
+    <div>
+        <table class="lenteleTrys">
+            <thead>
+                <tr>
+                <th style="width: 45%;">DESCRIPTION</th>
+                <th style="width: 10%;">QYT</th>
+                <th style="width: 15%;">UNIT PRICE</th>
+                <th style="width: 40%;">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monitorius</td>
+                    <td>10</td>
+                    <td>100.99</td>
+                    <td>1009.9</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>0.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table class="paskutine">
+            <tr>
+                <td style="width: 355px;"></td>
+                <td><table class="lenteleKeturi">
+            <tr>
+                <td style="color: #333f4f; font-size: 12px; font-weight: 800;">SUBTOTAL</td>
+                <td style=" font-size: 12px; border-bottom: 1px solid #bfbfbf; text-align: right; padding-top: 3px; padding-bottom: 6px;">1009.9</td>
+            </tr>
+            <tr>
+                <td style="color: #333f4f; font-size: 12px; font-weight: 800;">DISCOUNT</td>
+                <td style=" font-size: 12px; border-bottom: 1px solid #bfbfbf; text-align: right;padding-top: 3px; padding-bottom: 6px;">0.00</td>
+            </tr>
+            <tr>
+                <td style="font-weight: 800; color: #333f4f;">Balance Due</td>
+                <td style="font-weight: 800; background-color: #cfe2f3; border-bottom: 1px solid black; padding-top: 10px; padding-bottom: 13px; width: 161px; text-align: right;">€ 1,009.90</td>
+            </tr>
+
+        </table></td>
+            </tr>
+        
+    </table>
+    </div>
+</body>
+
+</html>

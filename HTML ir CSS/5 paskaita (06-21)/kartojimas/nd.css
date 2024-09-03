@@ -1,0 +1,110 @@
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex-container {
+    display: block;
+    /* margin: 0 auto;
+    width: 100%;
+    max-width: 1140px; */
+    position: absolute;
+    top: 50%;
+    left: 37%;
+
+    
+}
+
+
+/* priekine dalis */
+
+.front {
+    background: radial-gradient(circle, rgba(240,70,222,1) 32%, rgba(30,142,219,1) 100%);
+    width: 360px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    margin-bottom: 70px;
+    box-shadow: 0 0 10px 10px;
+}
+
+.logo {
+    width: 50px;
+    padding-left: 45px;
+}
+
+.slogan {
+    color: white;
+    margin-top: -15px;
+}
+
+
+/* galine dalis  */
+
+
+.back {
+    background: radial-gradient(circle, rgba(88,93,228,1) 32%, rgba(242,70,235,1) 61%);
+    width: 360px;
+    height: 210px;
+    background-color: rgb(218, 51, 195);
+display: flex; 
+   gap: 5px;
+   align-items: center;
+}
+
+   
+
+.name {
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 17px 10px 17px 10px;
+text-align: right;
+
+}
+
+.name h2 {
+    color: rgb(226, 72, 226);
+    font-weight: 800;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.name p {
+    margin: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(165, 164, 164);
+    letter-spacing: 3px;
+}
+
+.info {
+    color: white;
+    padding-left: 10px;
+    
+}
+
+.info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    font-size: 13px;
+}
+
+.info ul li {
+    margin: 6px 0;
+}
+
+.gap {
+    width: 6px;
+    background-color: white;
+
+}

@@ -1,0 +1,147 @@
+
+/* :root - kreipiamasi i html taga. */
+:root {
+    --site-color-01: #c13584;
+    --site-color-01-hover: #c20a72;
+}
+
+
+body {
+    background-color: #1e1e1e;
+}
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(img/facebook-color.png) url(img/instagram-color.png);
+} /*Pasidarom, kad uzvedus pele ant iconos pirma karta jinai nesublyksetu.*/
+
+h1 {
+    font-size: 26px;
+    line-height: 32px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 26px;
+    line-height: 32px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+    font-family: Roboto;
+}
+
+a {
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+    font-family: Roboto;
+    cursor: pointer;
+} /* uzvedus pele ant linko ji pasikeicia */
+
+
+
+.header-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    padding-left: 60px;
+}
+
+.logo img {
+    height: 40px;
+    align-self: center;
+}
+
+.nav{
+    width: fit-content;
+    height: 100%;
+}
+
+.nav ul {
+    list-style: none;
+    margin-left: 30px;
+} 
+
+.nav ul li { 
+    display: inline;
+    float: left; 
+}
+
+.nav ul li a { 
+    padding: 0 10px; 
+    font-family:'Roboto', sans-serif;
+    line-height: 60px; 
+    color: black; 
+    display: block;
+    height: 100%;
+
+}
+
+.nav ul li a:hover {
+    color: #c13584;
+}
+
+.social-media {
+    width: fit-content;
+    height: 100%;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.social-media .fb {
+    width: 20px;
+    height: 20px;
+    background-image: url(img/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social-media .in {
+    width: 20px;
+    height: 20px;
+    background-image: url(img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social-media .fb:hover {
+    background-image: url(img/facebook-color.png);
+}  
+        
+.social-media .in:hover {
+    background-image: url(img/instagram-color.png);
+} 

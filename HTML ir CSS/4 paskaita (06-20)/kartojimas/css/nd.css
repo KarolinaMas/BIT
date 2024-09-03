@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(36, 35, 35);
+    font-family: 'Libre Baskerville', serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* Headeris */
+/* uzdedam headeriui spalva */
+header {
+    background-color: rgb(144 117 174);
+    padding: 10px 0;
+}
+
+/* susideliojam navigacija ir logotipa */
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* iscentruoja puslapi */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 0 10px;
+    color: rgb(22, 20, 20);
+    font-weight: 400;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(74 51 98);
+    color: aliceblue;
+}
+
+.logo {
+    width: 110px;
+}
+
+/* Sekcijos */
+
+section {
+    background-image: url(../images/pexels-juan-pablo-serrano-arenas-1242348.jpg);
+    background-size: 100%;
+}
+section:nth-child(2n) {
+    background-image: url(../images/pexels-juan-pablo-serrano-arenas-1242348\ -\ Copy.jpg);
+}
+
+/* pirma sekcija */
+
+.flex-container-one {
+    display: flex;
+    gap: 50px;
+    text-align: justify;
+    padding: 20px 0 50px;
+}
+
+.image-cv {
+    width: 755px;
+}
+
+.s-one h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-weight: 700;
+} 
+
+/* antra sekcija */
+
+.flex-container-two {
+    display: flex;
+    gap: 50px;
+    text-align: justify;
+    padding: 20px 0 50px;
+}
+
+.image-salonas {
+    width: 1000px;
+}
+
+.s-two h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-weight: 700;
+} 
+
+/* trecia sekcija */
+
+.flex-container-three {
+    display: flex;
+    gap: 50px;
+    text-align: justify;
+    padding: 20px 0 50px;
+}
+
+.image-darbai {
+    width: 400px;
+}
+
+.s-three h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-weight: 700;
+} 
+
+.text-three p {
+    padding-bottom: 15px;
+}
+
+/* ketvirta sekcija */
+
+.flex-container-four {
+    display: flex;
+    gap: 50px;
+    text-align: justify;
+    padding: 20px 0 50px;
+}
+
+.image-laisvos-vietos {
+    width: 600px;
+}
+
+.s-four h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-weight: 700;
+} 
+
+/* penkta sekcija */
+
+.flex-container-five {
+    display: flex;
+    gap: 50px;
+    text-align: justify;
+    padding: 20px 0 50px;
+}
+
+.image-kontaktai {
+    width: 400px;
+}
+
+.s-five h1 {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-weight: 700;
+} 
+
+.flex-footer {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.prekes-zenklas {
+    width: 100px;
+}
