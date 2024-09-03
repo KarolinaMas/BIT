@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ND</title>
+  </head>
+  <body>
+    <script>
+      function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      //         Naršyklėje nupieškite linija iš 400 “*”.
+      // a)	Naudodami css stilių “suskaldykite” liniją taip, kad visos žvaigždutės matytųsi ekrane;
+      // b)	Programiškai “suskaldykite” žvaigždutes taip, kad vienoje eilutėje nebūtų daugiau nei 50 “*”;
+
+      for (let i = 1; i <= 400; i++) {
+        let star = "*";
+        document.write(star);
+        if (i % 50 === 0) {
+          document.write("</br>");
+        }
+      }
+
+      // 1.	Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas:
+
+      let headingNumber = rand(1, 6);
+
+      document.write(`<h${headingNumber}>${headingNumber}</h${headingNumber}>`);
+
+      // 2.	Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni.
+
+      let result = "";
+
+      for (i = 1; i <= 3; i++) {
+        randomNumber = rand(-10, 10);
+        if (randomNumber < 0) {
+          result = document.write(
+            `<span style="color: green";> ${randomNumber}</span><br>`
+          );
+        } else if (randomNumber === 0) {
+          result = document.write(
+            `<span style="color: red";> ${randomNumber}</span><br>`
+          );
+        } else {
+          result = document.write(
+            `<span style="color: blue";> ${randomNumber}</span><br>`
+          );
+        }
+      }
+
+      // 3.	Sukurkite kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+
+      let deleteOne = "An American in Paris";
+      let deleteTwo = "Breakfast at Tiffany's";
+      let deleteThree = "2001: A Space Odyssey";
+      let deleteFour = "It's a Wonderful Life";
+
+      let resultD = deleteOne.replaceAll(/[aeyuioAEYIUO]/g, "");
+      let resultV = deleteTwo.replaceAll(/[aeyuioAEYIUO]/g, "");
+      let resultS = deleteThree.replaceAll(/[aeyuioAEYIUO]/g, "");
+      let resultX = deleteFour.replaceAll(/[aeyuioAEYIUO]/g, "");
+
+      document.write(resultD + "<br>");
+      document.write(resultV + "<br>");
+      document.write(resultS + "<br>");
+      document.write(resultX + "<br>" + "<br>");
+
+      // 4.	Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
+
+      let count = 0;
+      let resultOther = "";
+
+      for (let i = 1; i <= 300; i++) {
+        let randomNumbers = rand(0, 300);
+
+        if (randomNumbers > 150) {
+          count++;
+        }
+
+        if (randomNumbers > 275) {
+          resultOther += ` <span style="color:red";>${randomNumbers} </span> `;
+        } else {
+          resultOther += `<span>${randomNumbers} </span>`;
+        }
+      }
+      document.write(resultOther);
+      document.write(
+        `<br><h2>Numbers more than 150 quantity is: ${count} </h2>`
+      );
+
+      // 5.	Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
+
+      for (let i = 1; i <= 3000; i++) {
+        if (i % 77 === 0) {
+          document.write(`${i}, `);
+        }
+        if (i === 2926) {
+          document.write(`${i} `);
+        }
+      }
+    </script>
+  </body>
+</html>

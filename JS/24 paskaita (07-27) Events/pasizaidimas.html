@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events JS app</title>
+</head>
+<body>
+    <button id="btn">Spausk tik</button>
+    <!--  inline variantas. --> 
+    <button onclick="alert('va dabar tai bėk!')">Pamatysi kas bus</button> 
+
+    <!-- su funkcijos įterpimu -->
+    <button onclick="myFunc()">Ispaniškai labas</button>
+    
+    <!-- addEventListener() metodas - element.addEventListener(eventType, listenerFunction). 1. eventType - stringas atvaizduojantis evento tipą, 2. listenerFunction - funkcija, kuri bus iššaukta, kai įvyks eventas. -->
+    <button id="mygis">tikiuosi čia jau paskutinis</button>
+
+    <script>
+        var btn = document.getElementById('btn');
+// kodas apačioje yra event handler arba dar gali būt vadinamas event listener. 
+        btn.onclick = function() { // onclick - yra event.
+            alert('labadiena, ka jus?');
+        };
+
+        function myFunc() {
+            document.write('ola amigos!');
+        }
+
+        var mygis = document.getElementById('mygis');
+        
+        mygis.addEventListener('click', function() {
+            alert('Paskutinis jau tikrai');
+        });
+    </script>
+</body>
+</html>

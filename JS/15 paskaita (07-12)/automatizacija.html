@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ciklas = algoritmas (atsikartojanti veiksmų seka), iteracija - vienas ciiklo ratas.
+        // while() ciklas:
+
+        // let i = - dažniausiai taip žymima iteracija.
+
+        // let i = 0;
+
+        //         while(i < 10) {
+
+        //             if(i > 5) {
+        //                 console.log('daugiau nei 5');
+        //             }
+
+        //             i++;
+
+        //             console.log('ciklas veikia')
+        //         }
+
+        // 5 užduotis (su automatizacija):
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let nuliai = 0;
+        let vienetai = 0;
+        let dvejetai = 0;
+
+        let i = 0;
+
+        while (i < 4) {
+            console.log('ciklo nr', i);
+            let skaicius = rand(0, 2);
+            console.log(skaicius);
+
+            if (skaicius === 0)
+
+                nuliai++;
+
+            if (skaicius === 1)
+
+                vienetai++;
+
+            if (skaicius === 2)
+
+                dvejetai++;
+
+            i++;
+        }
+
+        console.log('nulių yra:', nuliai, 'vienetų yra:', vienetai, 'dvejetų yra:', dvejetai);
+
+
+
+        // UŽDUOTIS. Atspausdinkita visus porinius skaičius nuo 2 iki 100.
+        //Remainder (%) operatorius rodo liekną.
+
+        i = 2;
+
+        while (i <= 100) {
+
+            if (i % 2 === 0)
+                console.log(i);
+
+            i++;
+        }
+
+
+        // Komandos, kurios galios visiem ciklam:
+
+        // while(true) { // while ciklas dažniau naudojamas, kai reikalingi begaliniai ciklai.
+
+        //     continue; // reiškia perėjimą į sekančią iteraciją.
+        //     break; // ciklo nutraukimas.
+        // }
+
+        // ciklas stabdomas jei skaičius iškrito 55:
+
+        while (true) {
+           
+            let sk = rand(0, 100);
+
+            console.log('gautas skaicius', sk);
+            
+            if (sk === 55) {
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

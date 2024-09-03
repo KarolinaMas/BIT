@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcijos</title>
+</head>
+
+<body>
+    <script>
+        // funkcijos aprašymas : raktažodis function, funkcijos pavadinimas (išskyrus funkcijų pavadinimai, kurie jau yra itegruoti į JS: eval, parseInt, parseFloat, escape ir unescape.), funkcijos parametrai ().
+        function multiply(a, b) {
+            console.log(a * b);
+
+            return a * b;// nurodom ką tururėtumėm susigrąžint
+        }
+        // funkcijos iššaukimas (function call), skliaustuose nurodomi jau ne parametrai, o argumentai, funkciją galima iššaukti daug kartų keičiant argumentus:
+        multiply(10, 50);
+
+        let num = multiply(15, 15);
+        console.log(num);
+// stengtis nenaudoti globalių kintamųjų, naudotis parametrais.
+
+// arrow funkcija - daroma tiesiogiai priskiriant prie kintamojo.
+let divide = (a, b) => {
+    return a / b;
+}
+console.log(`A padalinta iš B ${divide(10, 5)}`); 
+// arrow funkcija visada turi būt aprašyta aukščiau už iššaukimą, nes yra deklaruojamas kintamasis, o paprasta funkcija gali būt iššaukiama ir aukščiau ir žemiau jos aprašymo.
+
+// arrow funkciją galima sutrumpinti:
+let sum = (a, b) => a * b;
+
+console.log(sum(2, 6));
+
+// sutrumpinimas jei yra vienas parametras:
+
+let addEleven = a => a + 11;
+
+console.log(addEleven(582));
+
+// standartinės parametrų reikšmės pagal nutylėjimą:
+
+function generateName(name = 'Calvin', surname = 'Clein') {
+    return name + ' ' + surname;
+}
+console.log(generateName('kukulis', ));
+
+// savaime išsišaukianti funkcija (self invoking function):
+
+(function init() {
+    document.write('ką jūs?')
+}) ();
+
+// Scopes :
+
+// Global - bendrai prieinamas kintamasis;
+
+// Block = tai, kas yra tarp riestinių skliaustų {};
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ND</title>
+  </head>
+  <body>
+    <script>
+      // 1.	Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
+
+      const vardas = "Karolina";
+      const pavarde = "Maščinskaitė";
+
+      if (vardas.length > pavarde.length) {
+        console.log(vardas);
+      } else if (vardas.length === pavarde.length) {
+        console.log(`Vardas ir pavardė yra vienodo ilgio.`);
+      } else {
+        console.log(pavarde);
+      }
+
+      // 2.	Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį :
+      // "Aš esu Vardenis Pavardenis. Man yra XX metai(ų)".
+
+      const gimimoMetai = 2000;
+      const sieMetai = 2024;
+
+      console.log(
+        `Aš esu ${vardas} ${pavarde}. Man yra ${
+          sieMetai - gimimoMetai
+        } metai(ų)`
+      );
+
+      // 3.	Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.
+
+      const aktVardas = "Cillian";
+      const aktPavarde = "Murphy";
+      const trysPaskutines = `${aktVardas.slice(-3) + aktPavarde.slice(-3)}`;
+
+      console.log(trysPaskutines);
+    </script>
+  </body>
+</html>

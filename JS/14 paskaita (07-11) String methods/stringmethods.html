@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript string methods</title>
+</head>
+
+<body>
+    <script>
+        // Stengtis nevartoti lietuviškų raidžių vadinant kintamąjį ir išvis vengti įvairių simbolių, geriausia vadinti angliškai.
+
+        // Atvirkščias pasvirasis brūkšnys nurodo "escape" simbolį Javascript sintaksėje (padeda atskirti turinį, jei yra pakartojamai naudojamos kabutės) pvz:
+        // let x = "<div class="/"text"/></div>;
+
+        // Sklausteliais - "()", galima išskirti aritmetinį veiksmą, nurodyti veiksmo pirmumą (kaip ir matematikoje) pvz.:
+
+        let vardas = 'Johnny';
+        let pavarde = 'Depp';
+        let metai = 2023;
+        let gimimoMetai = 1970;
+
+        console.log('Aš esu ' + vardas + ' ' + pavarde + '.' + ' Man ' + (metai - gimimoMetai) + ' metai.');
+
+        // Template literals (backtick (po escape clavišu)):
+
+        console.log(`Aš esu ${vardas} ${pavarde}. Man ${metai - gimimoMetai} metų.`); // Ganausi tas pats kaip ir prieš tai. Vietoj + ir kabučių (Variable Substitutions) taip pat aritmetiniam veiksmam (eng. pav. - interpolation) naudojam ${}. Žymiai lengviau :))) bet nebūtina visąlaik naudoti.
+
+        // Math biblioteka - automatiškai integruota mūsų naršyklėse. Kreipiamės visąlaik iš didžiosios raidės.
+
+        // Math.min (nurodo mažiausią skaičių) pvz.:
+
+        // console.log(Math.min(4, 3333, 20, 0.3));
+
+        let min = Math.min(4, 333, 5, 0.3);
+        console.log(`Mažiausias skaičius yra ${min}`);
+
+        // Math.max (nurodo didžiausią skaičių) pvz. (tas pats kaip ir su Math.min):
+
+        let max = Math.max(4, 333, 5, 0.3);
+        console.log(`Didžiausias skaičius yra ${max}`);
+
+        // Math.random - nurodo atsitiktinį skaičių tarp 0 ir 1. pvz.:
+
+        let x = Math.random();
+        console.log(`Atsitiktinis skaičius ${x}`);
+
+        // PAPILDOMAI. View -> Problems - rodo kur įsivėlus klaida ir kokia klaida.
+
+        // Skaičiaus suapvalinimas (trys būdai):
+
+        // 1. Math.round() - standartinis suapvalinimo būdas pagal matematines taisykles.
+
+        console.log(`Suapvalintas skaičius Math.round() metodu ${Math.round(x)}`);
+
+        // 2. Math.ceil() - suapvalinimas iki artimiausio dedesniojo sveikojo skaičiaus.
+
+        console.log(`Suapvalintas skaičius Math.ceil() metodu ${Math.ceil(x)}`);
+
+        // 3. Math.floor() - suapvalinimas iki artimiausio mažesniojo sveikojo skaičiaus.
+
+        console.log(`Suapvalintas skaičius Math.floor() metodu ${Math.floor(x)}`);
+
+        // toFixed() - pasirenkamas norimas skaičius po kablelio suapvalinti.
+
+        console.log(`Suapvalinimui pasirinktas penktas skaičius po kablelio ${x.toFixed(5)}`);
+
+        //PAPILDOMAI. Galima iškarto kreiptis į skaičių pvz.:
+
+        console.log(12.3364.toFixed(3)); // tačiau tai negalioja su stringais, būtinai turi būt skaičius!!
+
+
+        // STRINGAI
+        // string.slice(*pradžia, *pabaiga(gali būti tik pradžios reikšmė)) - "atsipjaunam" stringo.
+        
+        let string = `Suapvalinimui pasirinktas penktas skaičius po kablelio ${x.toFixed(5)}`;
+        
+        console.log(string);
+        
+        console.log(string.slice(0, 10));
+
+        console.log(string.slice(10)); //pvz. su vienu parametru.
+
+        console.log(string.slice(-10)); //paliekami 10 paskutinių simbolių.
+
+        console.log(string[0]); //paiimamas tik pasirinktas simbolis (simboliai skaičiuojami nuo 0).
+
+        // string.replace(*'ką norim pakeist', *'kuo norim pakeist') - pakeičiam norimą stringo simbolį, žodį. 
+
+        console.log(string.replace('skaičius', 'skaitmuo')); //Veikia tik ant vienos pasirinktos stringo dalies, jei ta dalis kartojasi, ji jau nebus vėl pakeičiama.
+
+        // replaceAll - pakeičiama visos besikartojančios stringo dalys:
+
+        console.log(string.replaceAll(' ','-'));
+
+        // string.slice, string.replace, string.replaceAll - nemodifikuoja kintamojo.
+
+        // PAPILDOMAI. skaičiaus konvertavimas į stringą - toString.
+        // Stringo kenvertavimas į skaičių - parseInt() (stringo su sveiku skaičiu konvertavimas); parsFloat() (stringo su skaičiumi po kablelio konvertavimas).
+        // Paprastesnis variantas - +*skaičius (ESM konvertavimo variantas).
+
+        // string.toUpperCase() - konvertuoja visas raides į didžiasias:
+        
+        console.log(string.toLocaleUpperCase());
+
+        // string.toLowerCase() - konvertuoja visas raides į mažasias:
+
+        console.log(string.toLocaleLowerCase());
+
+        // string.substring(*nurodom nuo kurios pazicijos norim susigrąžint stringo tekstą):
+
+        console.log(string.toLocaleUpperCase() + string.substring(3));
+
+        // string.indexOf('*įrašomas norimas žodis, kurio pazicijos pradžią norim rasti') - suranda norimo simbolio poziciją stringe:
+
+        console.log(string.indexOf('po')); // parodo simbolio, kuriuo prasideda žodis poziciją.
+
+        // string.lastIndexOf(*nurodoma norimo rasti paskutinio simbolio pozicija) - randama paskutinio simbolio pozicija:
+
+        console.log(string.lastIndexOf(' '));
+
+        // sring.includes(*rašomas žodis ar simbolis, kurį norim patikrint ar yra jis srtinge) - patikrinama ar stringe yra įvardintas tekstas:
+
+        console.log(string.includes('pirmadienis'));//Išmeta true arba false reikšmę.
+
+        if (string.includes('pirmadienis')){
+            
+            console.log('yraaa');  
+        
+        }else {
+
+            console.log('nėraaaa');
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

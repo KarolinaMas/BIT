@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ND</title>
+  </head>
+  <body>
+    <script>
+      function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      // Sugeneruokite masyvą iš 10 elementų, kurio elementai būtų masyvai iš 5 elementų su reikšmėmis nuo 5 iki 25.
+      // 1. Naudodamiesi 1 uždavinio masyvu:
+      // a) Suskaičiuokite kiek masyve yra elementų didesnių už 10
+      const multiArray = [];
+
+      let count = 0;
+
+      for (let i = 0; i < 10; i++) {
+        multiArray[i] = []; // deklaruojam, kad masyvo viduje bus kitas masyvas.
+        for (let x = 0; x < 5; x++) {
+          multiArray[i][x] = rand(5, 25);
+          if (multiArray[i][x] > 10) {
+            count++;
+          }
+        }
+      }
+
+      console.log(multiArray);
+      console.log(`daugiau uz 10 yra: ${count}`);
+
+      // b) Raskite didžiausio elemento reikšmę;
+
+      let max = 0;
+
+      for (const child of multiArray) {
+        for (const value of child) {
+          if (value > max) max = value;
+        }
+      }
+
+      console.log(max);
+
+      // c) Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas (t.y. suma reikšmių turinčių indeksą 0, 1 ir t.t.)
+
+      const addedArray = [];
+
+      for (let i = 0; i < 5; i++) {
+        addedArray[i] = 0;
+
+        for (let a = 0; a < multiArray.length; a++) {
+          addedArray[i] += multiArray[a][i];
+        }
+      }
+
+      console.log(
+        "antro lygio masyvų su vienodais indeksais suma:",
+        addedArray
+      );
+
+      // d) Visus antro lygio masyvus “pailginkite” iki 7 elementų
+
+      const newArray = multiArray.slice();
+
+      for (let i = 0; i < multiArray.length; i++) {
+        newArray[i] = [];
+        for (let x = 0; x < 7; x++) {
+          newArray[i][x] = rand(5, 25);
+        }
+      }
+
+      console.log(newArray);
+
+      // 2. Sukurkite masyvą iš 10 elementų. Kiekvienas masyvo elementas turi būti masyvas su atsitiktiniu kiekiu nuo 2 iki 20 elementų. Elementų reikšmės atsitiktinai parinktos raidės iš intervalo A-Z. Išrūšiuokite antro lygio masyvus pagal abėcėlę (t.y. tuos kur su raidėm).
+
+      const arrayTen = [];
+      const letters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "I",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      for (let i = 0; i < 10; i++) {
+        arrayTen[i] = [];
+        for (let x = 0; x < rand(2, 20); x++) {
+          arrayTen[i][x] = letters[rand(0, letters.length - 1)];
+        }
+      }
+
+      console.log(arrayTen);
+
+      for (const value of arrayTen) {
+        value.sort();
+      }
+
+      console.log(arrayTen);
+
+      // 3. Išrūšiuokite antro uždavinio pirmo lygio masyvą taip, kad elementai kurių masyvai trumpiausi eitų pradžioje. Masyvai kurie turi bent vieną “K” raidę, visada būtų didžiojo masyvo visai pradžioje.
+
+      arrayTen.sort((a, b) => {
+        if (a.includes("K") && !b.includes("K")) return -1;
+        else if (!a.includes("K") && b.includes("K")) return 1;
+        else return a.length - b.length;
+      });
+
+      console.log([...arrayTen]);
+    </script>
+  </body>
+</html>

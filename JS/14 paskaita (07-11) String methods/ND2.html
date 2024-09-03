@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ND</title>
+</head>
+
+<body>
+
+    <script>
+        // 4 užduotis:
+
+        let o = 'Once upon a time in hollywood';
+
+        o = o
+            .toLocaleLowerCase()
+            .replaceAll('o', '*');
+        //Sujungiami du metodai.
+
+        console.log(o);
+
+        // PAPILDOMAI. REGEXR.COM. pvz.:
+        o = o.toLocaleLowerCase().replaceAll(/[oO]/g);
+        // / - simbolizuoja regexr, g - ieškoma per visą stringą, itervalą simbolizuoja brūkšnelis, pvz. /[a-z]/g
+
+        console.log(o);
+
+        // 5 užduotis:
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let pirmas = rand(0, 2);
+
+        let antras = rand(0, 2);
+
+        let trečias = rand(0, 2);
+
+        let ketvirtas = rand(0, 2);
+
+        console.log(pirmas, antras, trečias, ketvirtas); // Taip galima vienu karru atsispaudinti visus kintamuosius.
+
+        let nuliai = 0;
+        let vienetai = 0;
+        let dvejetai = 0;
+
+        if (pirmas === 0) {
+            nuliai++;
+        }
+        if (antras === 0) {
+            nuliai++;
+        }
+        if (trečias === 0) {
+            nuliai++;
+        }
+        if (ketvirtas === 0) {
+            nuliai++;
+        }
+
+        if (pirmas === 1) {
+            vienetai++;
+        }
+        if (antras === 1) {
+            vienetai++;
+        }
+        if (trečias === 1) {
+            vienetai++;
+        }
+        if (ketvirtas === 1) {
+            vienetai++;
+        }
+
+        if (pirmas === 2) {
+            dvejetai++;
+        }
+        if (antras === 2) {
+            dvejetai++;
+        }
+        if (trečias === 2) {
+            dvejetai++;
+        }
+        if (ketvirtas === 2) {
+            dvejetai++;
+        }
+
+        console.log('nulių yra:', nuliai, 'vienetų yra:', vienetai, 'dvejetų yra:', dvejetai);
+
+        // 6 užduotis NEBAIGTA:
+
+        let first = rand(0, 4);
+
+        let second = rand(0, 4);
+
+        let rezultatas = 0;
+
+        // let rezultatas; - Prie kintamojo galima ir nepriskirt reikšmės, bet atspausdinant jį nerodys rezultato. Toj pačioj eilutėj galima deklaruoti kelis kintamojo pavadinimus be reikšmės.
+
+        console.log('Gautos reikšmės', pirmas, antras);
+
+        if (first > second) {
+            if (antras === 0) {
+                console.log('dalyba negalima');
+            }
+            else {
+                rezultatas = first / second;
+            }
+        }
+        else {
+            if (pirmas === 0) {
+                console.log('dalyba negalima');
+            }
+            else {
+                rezultatas = second / first;
+            }
+
+        }
+        console.log(rezultatas.toFixed(2));
+
+        // 7 Užduotis BLOGAS:
+
+        let nrViens = rand(0, 25);
+
+        let nrDu = rand(0, 25);
+
+        let nrTrys = rand(0, 25);
+
+        console.log('reikšmės', nrViens, nrDu, nrTrys);
+
+        if (nrViens > nrDu && nrViens < nrTrys) {
+            console.log(nrViens);
+        } else {
+            if (nrDu > nrViens && nrDu < nrTrys) {
+                console.log(nrDu);
+            } else {
+                if (nrTrys > nrViens && nrTrys < nrDu) {
+                    console.log(nrTrys);
+                }
+            }
+        }
+
+        // 8 užduotis:
+
+        let uno = 'Cillian';
+
+        let dos = 'Murphy';
+
+        let ini = uno[0] + dos[0];
+
+        console.log(ini);
+
+        // 9 užduotis:
+
+        let abc = 'abcdefghiyjklmnopqrstuvwxz'
+
+        console.log(
+            abc[rand(0, abc.length -1)],
+            abc[rand(0, abc.length -1)],
+            abc[rand(0, abc.length -1)],
+        );
+    </script>
+    </script>
+</body>
+
+</html>

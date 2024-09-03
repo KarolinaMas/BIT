@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatoriai</title>
+</head>
+
+<body>
+    <script>
+
+        let x = 10;
+        let y = 15;
+        // // atsispausdinkite pasisveikinimo tekstą jei
+        // // x = 10 IR jei y = 15.
+
+        if (x === 10 && y === 15);
+            console.log('Hello World');
+
+        // //  Jei yra viena eilutė po if {} nereikia.
+        // // && (IR) operatorius sudeda sąlygas, sąlygų gali būt ir daugiau nei dvi.
+        // // Lengviau susigaudyti kai yra mažiau 'nestinimo'.
+
+        // // atsispausdinkite atsissveikinimo tekstą jei
+        // // x = 10 ARBA jei y = 20.
+
+        if (x === 5 || y === 20);
+            console.log('Bye World');
+
+        // ARBA || operatorius.
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let p = rand(5, 10);
+        let g = rand(15, 20);
+        let h = rand(0, 1);
+        // atsispausdinkite pasisveikinimo tekstą.
+
+        if (p === 10 && g === 15);
+            console.log('Hello World');
+
+        // atsispausdinkite atsissveikinimo tekstą.
+
+        if (p === 10 ||
+            g === 18 ||
+            g === 17 ||
+            g === 16
+        );
+            console.log('Bye World');
+
+            if ((p >= 9 && g <= 19) || h === 1); // () - sujungia ssąlygą, jei p > 5 && g <20 neapskliaudžiama, z === 1 ims viršų.
+            console.log('Sujungta sąlyga');
+
+
+
+    </script>
+</body>
+
+</html>

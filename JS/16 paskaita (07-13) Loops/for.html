@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        for (let i = 25; i > 0; i--) // deklaruojam kintamąjį, nurodom kondiciją, incrimento arba dekrimento priskyrimas. viskas eina būtent tikia tvarka.
+            // while ciklas pranešnis tuo, kad galima pasirinkti vietą kur keisti incrimentą.
+
+            console.log('iteracijos nr', i);
+
+        // iš ND CIKLAI:
+
+        for (let i = 1; i <= 400; i++) {
+            // šiuo atveju inkrimentas pridedamas ciklo pabaigoj, todėl negalim rašyt i = 0.
+            document.write('*');
+
+            if (i % 50 === 0) {
+
+                document.write('<br />');
+            }
+        }
+
+        // 1 užduotis:
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let nr = rand(1, 6);
+
+        document.write(`<h${nr}>Labas pasauli</h${nr}>`);
+
+        // 2 užduotis:
+
+        let rezultatas = ''; // deklaravus kintamąjį prieš ciklą, jį  galima atvazduoti ir cikle. 
+
+        for (let ik = 0; ik < 3; ik++) {
+            let skc = rand(-10, 10);
+
+            if (skc < 0) {
+                rezultatas += `<span style="color: green;">${skc}</span>`
+            } else if (skc === 0) {
+                rezultatas += `<span style="color: red;">${skc}</span>`
+            } else {
+                rezultatas += `<span style="color: blue;">${skc}</span>`
+            }
+
+        }
+        document.write(rezultatas);
+
+        // 3 užduotis:
+
+        let stringas = 'An American in Paris';
+
+        // metodas .replaceAll ir regex pagalba:
+
+        // stringas = stringas.replaceAll(/[aeiouy]/gi, '');
+
+        // document.write(`<p>${stringas}`);
+
+        // varantas su ciklais:
+        let rezas = '';
+        let balses = 'aeiouy';
+
+        for (let icr = 0; icr < stringas.length; icr++) {
+            if (!balses.includes(stringas[icr].toLocaleLowerCase())) {
+                rezas += stringas[icr];
+            }
+        }
+        document.write(`<p>${rezas}`);
+
+        //4 užduotis nebaigta:
+
+        rezas = '';
+        let calc = 0;
+
+        for (let is = 0; is < 300; is++) {
+            let number = rand(0, 300);
+            if (number > 150)
+                calc++
+
+            if (number > 275) {
+                rezas += `<span style="color: red;">${number}</span> `;
+            }
+            rezas += number;
+        }
+        document.write(rezas);
+
+        // 5 užduotis kodas neveikia:
+
+        rezas = '';
+
+        for (let ag = 1; ag <= 3000; ag++) {
+            // let kablelis = ', ';
+
+            // if(i === 2926)
+            //     kablelis = ''; vietoj kondicijos galima naudot terner operatorių.
+
+            if (ag % 77 === 0)
+                rezultatas += ag + (ag === 2926) ? '' : ', ';
+        }
+
+        document.write(`<h4>${rezas}</h4>`);
+
+        
+
+    </script>
+</body>
+
+</html>

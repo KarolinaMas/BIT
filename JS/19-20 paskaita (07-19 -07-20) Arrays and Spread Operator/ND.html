@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // NEBAIGTA
+      function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      // 1. Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
+
+      const letterArray = [];
+      const letters = ["A", "B", "C", "D"];
+
+      for (let i = 0; i < 200; i++) {
+        letterArray.push(letters[rand(0, 3)]);
+      }
+
+      console.log(letterArray);
+
+      function countLetters(array, letter) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === letter) {
+            count++;
+          }
+        }
+        console.log(`There are ${count} ${letter} in this array.`);
+      }
+
+      countLetters(letterArray, "A");
+      countLetters(letterArray, "B");
+      countLetters(letterArray, "C");
+      countLetters(letterArray, "D");
+
+      // 2. Išrūšiuokite 1 uždavinio masyvą pagal abecėlę.
+
+      console.log(letterArray.sort()); //.sort() - isrusiuoja masyva pagal abecele.
+
+      // 3. Sugeneruokite 3 masyvus pagal 1 uždavinio sąlygą. Sudėkite masyvus, sudėdami reiksmes pagal atitinkamus indeksus. Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių ir kiek unikalių kombinacijų gavote.
+
+      const one = [];
+      const two = [];
+      const three = [];
+
+      const combinationArray = [];
+
+      function generateArray(array, length) {
+        for (let i = 0; i < length; i++) {
+          array.push(letters[rand(0, 3)]);
+        }
+        console.log(array);
+      }
+
+      generateArray(one, 200);
+      generateArray(two, 200);
+      generateArray(three, 200);
+
+      for (const index in one) {
+        combinationArray[combinationArray.length] =
+          one[index] + two[index] + three[index];
+      }
+
+      console.log(combinationArray);
+      countLetters(combinationArray, "AAA");
+      countLetters(combinationArray, "BBB");
+      countLetters(combinationArray, "CCC");
+      countLetters(combinationArray, "DDD");
+
+      // 4. Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+
+      const arrayOne = [];
+      const arrayTwo = [];
+
+      for (let i = 0; i < 100; i++) {
+        const randNumb = rand(100, 999);
+        arrayOne.push(randNumb);
+
+        for (const value of arrayOne) {
+          let same = value;
+          if (value === same) {
+          }
+        }
+      }
+
+      for (let i = 0; i < 100; i++) {
+        const randNumb = rand(100, 999);
+        arrayTwo.push(randNumb);
+      }
+
+      console.log(arrayOne);
+      console.log(arrayTwo);
+    </script>
+  </body>
+</html>

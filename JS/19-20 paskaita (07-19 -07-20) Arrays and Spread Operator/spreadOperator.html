@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread operator</title>
+  </head>
+  <body>
+    <script>
+      const array = [15, 25, 2, 33, 5, 4];
+
+      //... - spread operatorius ištraukia arba sujungia masyvo reikšmes. Šį operatorių naudojam kai nežinom tikslaus funkcijos parametrų skaičiaus. Dar naudojam su Math, nes pvz. math max nepriima tiesiogiai masyvo.
+
+      function max(...reiksmes) {
+        let max = 0;
+
+        for (const value of reiksmes) {
+          if (value > max) max = value;
+        }
+        return max;
+      }
+
+      console.log(max(...array)); //suradom didžiausią masyvo reikšmę naudojant spread operatorių.
+    </script>
+  </body>
+</html>
