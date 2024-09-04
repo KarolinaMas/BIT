@@ -7,8 +7,23 @@ body {
 }
 
 .image-div {
-    width: 100px;
-    height: auto;
+    padding: 45px;
+    position: relative;
+}
+
+.image-div .discount-display {
+   position: absolute; 
+   top: 20px;
+   right: 20px;
+   background-color: orangered;
+   color: white;
+   font-size: 12px;
+   padding: 3px 5px;
+}
+
+.image-div img {
+    width: auto;
+    height: 130px;
 }
 
 .about-div h3 {
