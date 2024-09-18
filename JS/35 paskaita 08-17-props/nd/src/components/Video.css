@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+iframe {
+    height: 300px;
+    width: 500px;
+    /* <iframe width="695" height="391" src="https://www.youtube.com/embed/P6FORpg0KVo" title="How to Make Learning as Addictive as Social Media | Duolingo&#39;s Luis Von Ahn | TED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */
+}
